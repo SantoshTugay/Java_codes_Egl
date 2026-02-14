@@ -1,9 +1,8 @@
-package interview_prgrams.Stringss;
+package interview_prgrams.Stringss.reversee;
 
 public class ReverseWordsCapitalize {
     public static void main(String[] args) {
-        System.out.println("Reverse Each and Capitalize first letter of the reversed word \n");
-        String input = "This is Epam Systems";
+        String input = "This is Epam Systems"; //Siht Si Mape Smetsys
 
         String[] words2 = input.split(" ");
         String result2 = "";

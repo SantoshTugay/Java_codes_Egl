@@ -2,40 +2,46 @@ package interview_prgrams.Stringss;
 
 import java.util.Arrays;
 
-/**
- * Approach: Sorting-based Anagram Validation.
- * Time Complexity: O(n log n) due to Arrays.sort().
- * Space Complexity: O(n) to store the character arrays.
- */
 public class Anagram {
     public static void main(String[] args) {
         String s1 = "listen";
         String s2 = "silent";
 
-        // 1. Pre-processing: Standardize inputs by removing whitespace and normalizing case.
-        // This ensures "Listen" and "silent " are correctly identified as anagrams.
-        s1 = s1.replaceAll("\\s", "").toLowerCase();
-        s2 = s2.replaceAll("\\s", "").toLowerCase();
-
-        // 2. Initial Optimization: If lengths differ, they cannot be anagrams (Short-circuit).
         if (s1.length() != s2.length()) {
-            System.out.println(s1 + ", " + s2 + " are not anagrams (Length mismatch)");
-        } else {
-            // 3. Conversion: Transform strings to char arrays for sorting.
-            char[] ch1 = s1.toCharArray();
-            char[] ch2 = s2.toCharArray();
+            System.out.println("Not Anagram");
+            return;
+        }
 
-            // 4. Sorting: Anagrams must have identical characters in the same frequency.
-            // Sorting brings identical characters to the same index.
-            Arrays.sort(ch1);
-            Arrays.sort(ch2);
+        // first way
+        char[] a1 = s1.toCharArray();
+        char[] a2 = s2.toCharArray();
 
-            // 5. Comparison: Use Arrays.equals to check if the sorted patterns match.
-            if (Arrays.equals(ch1, ch2)) {
-                System.out.println(s1 + ", " + s2 + " are anagrams");
-            } else {
-                System.out.println(s1 + ", " + s2 + " are not anagrams");
+        Arrays.sort(a1);
+        Arrays.sort(a2);
+
+        if (Arrays.equals(a1, a2))
+            System.out.println("Anagram");
+        else
+            System.out.println("Not Anagram");
+
+        // Another way
+
+        for (int i = 0; i < s1.length(); i++) {
+            char ch = s1.charAt(i);
+            int count1 = 0;
+            int count2 = 0;
+            for (int j = 0; j < s1.length(); j++) {
+                if (s1.charAt(j) == ch)
+                    count1++;
+                if (s2.charAt(j) == ch)
+                    count2++;
+            }
+            if (count1 != count2) {
+                System.out.println("Not Anagram");
+                return;
             }
         }
+
+        System.out.println("Anagram");
     }
 }

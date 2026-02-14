@@ -1,10 +1,9 @@
-package interview_prgrams.Stringss;
+package interview_prgrams.Stringss.reversee;
 
 public class ReverseWordsOrder {
     public static void main(String[] args) {
-    
-        System.out.println("--- LOGIC 2: Reversing Word Order ---");
-        String str = "This is oops Selenium";
+
+        String str = "This is oops Selenium"; // Selenium oops is This
         String arr[] = str.split(" ");
         String rev = "";
         for (int i = arr.length - 1; i >= 0; i--) {

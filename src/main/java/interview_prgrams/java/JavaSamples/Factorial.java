@@ -1,6 +1,6 @@
 package interview_prgrams.java.JavaSamples;
 
-public class                                                                                                                                                                        Factorial {
+public class Factorial {
 
 /*	public static long factorialIterative(in   t n) {
 		if (n < 0) throw new IllegalArgumentException("Factorial is not defined for negative numbers.");

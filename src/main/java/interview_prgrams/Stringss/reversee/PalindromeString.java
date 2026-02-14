@@ -1,4 +1,4 @@
-package interview_prgrams.Stringss;
+package interview_prgrams.Stringss.reversee;
 
 public class PalindromeString {
 
