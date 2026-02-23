@@ -14,7 +14,8 @@ public class ReverseWordsCapitalize {
                 revWord = word.charAt(j) + revWord;
             }
             // Capitalize first letter of the reversed word
-            String formatted = revWord.substring(0, 1).toUpperCase() + revWord.substring(1).toLowerCase();
+            String formatted = revWord.substring(0, 1).toUpperCase() +
+                    revWord.substring(1).toLowerCase();
             result2 = result2 + formatted + " ";
         }
         System.out.println("Input:  " + input);

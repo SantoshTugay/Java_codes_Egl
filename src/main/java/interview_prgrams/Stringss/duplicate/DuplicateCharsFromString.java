@@ -29,6 +29,7 @@ public class DuplicateCharsFromString {
             if (count > 1) {
                 System.out.println(arr[i] + " : " + count);
             }
+
         }
 
         // =====================================================
